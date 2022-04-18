@@ -28,3 +28,4 @@ jobs:
           amber print
         env:
           AMBER_SECRET: ${{ secrets.AMBER_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
