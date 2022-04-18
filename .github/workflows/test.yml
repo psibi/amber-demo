@@ -29,4 +29,4 @@ jobs:
           amber --version
           amber print
         env:
-          AMBER_SECRET: $${{ secrets.AMBER_SECRET }}
+          AMBER_SECRET: ${{ secrets.AMBER_SECRET }}
