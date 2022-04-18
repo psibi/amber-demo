@@ -24,8 +24,6 @@ jobs:
         run: |
           set -euo pipefail
 
-          printenv
-
           amber --version
           amber print
         env:
