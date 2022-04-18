@@ -23,6 +23,8 @@ jobs:
         run: |
           set -euo pipefail
 
+          echo $AMBER_SECRET
+
           amber --version
           amber print
         env:
