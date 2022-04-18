@@ -1,0 +1,29 @@
+name: 'build-test'
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'releases/*'
+
+jobs:
+  test: # make sure the action works on a clean machine without building
+    runs-on: ${{matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - os: ubuntu-latest
+        - os: windows-latest
+        - os: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: psibi/setup-amber@v1.0
+      - name: Some amber operations
+        run: |
+          set -euo pipefail
+
+          amber --version
+          amber print
+        env:
+          AMBER_SECRET: $${{ secrets.AMBER_SECRET }}
