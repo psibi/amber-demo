@@ -18,7 +18,7 @@ jobs:
         - os: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: psibi/setup-amber@v1.2
+      - uses: psibi/setup-amber@v2
         with:
           amber-version: 'v0.1.6'
         env:
