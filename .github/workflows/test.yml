@@ -17,10 +17,10 @@ jobs:
         - os: windows-latest
         - os: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: psibi/setup-amber@v1.1
+      - uses: actions/checkout@v4
+      - uses: psibi/setup-amber@v1.2
         with:
-          amber-version: 'v0.1.5'
+          amber-version: 'v0.1.6'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Some amber operations
